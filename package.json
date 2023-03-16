@@ -1,0 +1,23 @@
+{
+  "name": "fullhaus-acronym-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-mongo\" \"npm run start-server\"",
+    "start-mongo": "mongod --dbpath=./data",
+    "start-server": "node index.js",
+    "db-seed-data": "node db-scripts/seed-data.js"
+  },
+  "author": "Charles-Philippe",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "mongoose": "^7.0.2"
+  }
+}
